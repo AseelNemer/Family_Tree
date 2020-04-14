@@ -22,19 +22,19 @@ class Tree {
     public:
 
     node* root;
-    
+
+    Tree();
     Tree(string); //sets the root of the tree (the youngest person)
     
-    Tree addFather(string , string); // Tells the tree that the father of name is fname.
-    Tree addMother(string, string); // Tells the tree that the mother of name is mname.
+    Tree& addFather(string , string); // Tells the tree that the father of name is fname.
+    Tree& addMother(string, string); // Tells the tree that the mother of name is mname.
 
     void display();  // displays the tree in a human-friendly format.
     
     string relation(string);  // prints the relationship between this name and the root
-    string& relation1(string,string&,node *); //function helps relation func
     string find(string); // tells us whats the name of the bpersons who has this relation with the root
     
-    void remove(string node); // remove this person and all the others under him
+    string remove(string node); // remove this person and all the others under him
 
 };
 }
